@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Edit Fruit Page</h1>
+        <form action="/fruits/<%=index%>?_method=PUT" method="POST">
+            Name:<input type="text" name="name" value="<%=fruit.name%>" />
+            Color:<input type="text" name="Color" value="<%=fruit.color%>" />
+            Is Ready to Eat:
+                <input type="checkbox" name="readyToEat"
+                    <% if (fruit.readytoEAT === true) { %>
+                        checked
+                    <% } %>
+                />
+                <input type="submit" value="edit">
+        </form>   
+    </body>
+</html>
